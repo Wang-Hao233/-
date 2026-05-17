@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minesweeper-course-project"
+version = "1.0.0"
+description = "A Tkinter Minesweeper game for programming and algorithm practice."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Course Project Team" }]
+
+[project.scripts]
+minesweeper = "minesweeper.tk_app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
