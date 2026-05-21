@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网页版扫雷</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="hero">
+      <p class="eyebrow">HTML · CSS · JavaScript 课程项目</p>
+      <h1>网页版扫雷</h1>
+      <p class="intro">左键翻开格子，右键或手机长按插旗，翻开所有安全格即可获胜。</p>
+    </header>
+
+    <section class="top-bar" aria-label="游戏信息栏">
+      <div class="control-card">
+        <label for="difficulty">难度</label>
+        <select id="difficulty">
+          <option value="easy">简单 9x9 10 雷</option>
+          <option value="medium">中等 16x16 40 雷</option>
+          <option value="hard">困难 16x30 99 雷</option>
+        </select>
+      </div>
+
+      <div class="stat-card">
+        <span>当前难度</span>
+        <strong id="current-difficulty">简单</strong>
+      </div>
+      <div class="stat-card">
+        <span>剩余地雷</span>
+        <strong><span id="mine-count">0</span></strong>
+      </div>
+      <div class="stat-card">
+        <span>用时</span>
+        <strong><span id="timer">0</span> 秒</strong>
+      </div>
+      <div class="stat-card">
+        <span>最佳成绩</span>
+        <strong id="best-time">暂无</strong>
+      </div>
+
+      <button id="new-game" class="new-game-button" type="button">新游戏</button>
+    </section>
+
+    <p id="status" class="status" role="status">请选择难度后开始游戏。</p>
+
+    <section class="board-panel" aria-label="棋盘区域">
+      <div class="board-scroll">
+        <section id="board" class="board" aria-label="扫雷棋盘"></section>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
